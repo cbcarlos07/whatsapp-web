@@ -1,0 +1,6 @@
+2024/06/01-19:56:21.963 1050 Reusing MANIFEST D:\Documentos\Docker\docker-botpress\whatsapp-web\.wwebjs_auth\session-bot-zdg\Default\Local Storage\leveldb/MANIFEST-000001
+2024/06/01-19:56:21.967 1050 Recovering log #24
+2024/06/01-19:56:21.968 1050 Reusing old log D:\Documentos\Docker\docker-botpress\whatsapp-web\.wwebjs_auth\session-bot-zdg\Default\Local Storage\leveldb/000024.log 
+2024/06/02-13:29:30.348 58bc Level-0 table #27: started
+2024/06/02-13:29:30.475 58bc Level-0 table #27: 13433 bytes OK
+2024/06/02-13:29:30.558 58bc Delete type=0 #24

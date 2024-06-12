@@ -1,0 +1,65 @@
+2024/06/01-19:54:28.164 4d54 Reusing MANIFEST D:\Documentos\Docker\docker-botpress\whatsapp-web\.wwebjs_auth\session-bot-zdg\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/01-19:54:28.165 4d54 Recovering log #1135
+2024/06/01-19:54:28.557 4d54 Reusing old log D:\Documentos\Docker\docker-botpress\whatsapp-web\.wwebjs_auth\session-bot-zdg\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001135.log 
+2024/06/01-19:54:54.713 5dd4 Level-0 table #1143: started
+2024/06/01-19:54:54.803 5dd4 Level-0 table #1143: 1060131 bytes OK
+2024/06/01-19:54:54.870 5dd4 Delete type=0 #1135
+2024/06/01-19:54:54.913 5dd4 Compacting 1@1 + 4@2 files
+2024/06/01-19:54:55.221 5dd4 Generated table #1144@1: 82054 keys, 2231426 bytes
+2024/06/01-19:54:55.464 5dd4 Generated table #1145@1: 42617 keys, 2276843 bytes
+2024/06/01-19:54:55.716 5dd4 Generated table #1146@1: 22297 keys, 2186949 bytes
+2024/06/01-19:54:55.989 5dd4 Generated table #1147@1: 76472 keys, 1613321 bytes
+2024/06/01-19:54:55.989 5dd4 Compacted 1@1 + 4@2 files => 8308539 bytes
+2024/06/01-19:54:56.011 5dd4 compacted to: files[ 0 0 4 0 0 0 0 ]
+2024/06/01-19:54:56.011 5dd4 Delete type=2 #1137
+2024/06/01-19:54:56.011 5dd4 Delete type=2 #1138
+2024/06/01-19:54:56.011 5dd4 Delete type=2 #1139
+2024/06/01-19:54:56.011 5dd4 Delete type=2 #1140
+2024/06/01-19:54:56.011 5dd4 Delete type=2 #1143
+2024/06/01-19:55:11.589 56e8 Level-0 table #1149: started
+2024/06/01-19:55:11.658 56e8 Level-0 table #1149: 1018009 bytes OK
+2024/06/01-19:55:11.683 56e8 Delete type=0 #1142
+2024/06/01-19:55:11.873 3178 Compacting 1@1 + 4@2 files
+2024/06/01-19:55:12.134 3178 Generated table #1150@1: 84158 keys, 2233009 bytes
+2024/06/01-19:55:12.209 3178 Level-0 table #1153: started
+2024/06/01-19:55:12.283 3178 Level-0 table #1153: 994124 bytes OK
+2024/06/01-19:55:12.307 3178 Delete type=0 #1148
+2024/06/01-19:55:12.402 3178 Generated table #1151@1: 36858 keys, 2270044 bytes
+2024/06/01-19:55:12.571 3178 Generated table #1154@1: 24009 keys, 2188231 bytes
+2024/06/01-19:55:12.776 3178 Generated table #1155@1: 74615 keys, 1487899 bytes
+2024/06/01-19:55:12.777 3178 Compacted 1@1 + 4@2 files => 8179183 bytes
+2024/06/01-19:55:12.809 3178 compacted to: files[ 1 0 4 0 0 0 0 ]
+2024/06/01-19:55:12.900 3178 Moved #1153 to level-1 994124 bytes OK: files[ 0 1 4 0 0 0 0 ]
+2024/06/01-19:55:13.111 7e98 Compacting 1@1 + 3@2 files
+2024/06/01-19:55:13.339 7e98 Generated table #1156@1: 84160 keys, 2233271 bytes
+2024/06/01-19:55:13.339 7e98 Level-0 table #1158: started
+2024/06/01-19:55:13.397 7e98 Level-0 table #1158: 993372 bytes OK
+2024/06/01-19:55:13.420 7e98 Delete type=2 #1144
+2024/06/01-19:55:13.420 7e98 Delete type=2 #1145
+2024/06/01-19:55:13.420 7e98 Delete type=2 #1146
+2024/06/01-19:55:13.420 7e98 Delete type=2 #1147
+2024/06/01-19:55:13.420 7e98 Delete type=2 #1149
+2024/06/01-19:55:13.420 7e98 Delete type=0 #1152
+2024/06/01-19:55:13.616 7e98 Generated table #1159@1: 36865 keys, 2270191 bytes
+2024/06/01-19:55:13.752 7e98 Generated table #1160@1: 24009 keys, 2189027 bytes
+2024/06/01-19:55:13.752 7e98 Compacted 1@1 + 3@2 files => 6692489 bytes
+2024/06/01-19:55:13.775 7e98 compacted to: files[ 1 0 4 0 0 0 0 ]
+2024/06/01-19:55:13.775 7e98 Delete type=2 #1150
+2024/06/01-19:55:13.775 7e98 Delete type=2 #1151
+2024/06/01-19:55:13.776 7e98 Delete type=2 #1153
+2024/06/01-19:55:13.776 7e98 Delete type=2 #1154
+2024/06/01-19:55:15.222 7afc Moved #1158 to level-1 993372 bytes OK: files[ 0 1 4 0 0 0 0 ]
+2024/06/01-19:55:15.886 5dd4 Compacting 1@1 + 3@2 files
+2024/06/01-19:55:16.105 5dd4 Generated table #1161@1: 83111 keys, 2230197 bytes
+2024/06/01-19:55:16.253 5dd4 Generated table #1162@1: 38745 keys, 2274191 bytes
+2024/06/01-19:55:16.390 5dd4 Generated table #1163@1: 22828 keys, 2185997 bytes
+2024/06/01-19:55:16.437 5dd4 Generated table #1164@1: 1277 keys, 48317 bytes
+2024/06/01-19:55:16.437 5dd4 Compacted 1@1 + 3@2 files => 6738702 bytes
+2024/06/01-19:55:16.471 5dd4 compacted to: files[ 0 0 5 0 0 0 0 ]
+2024/06/01-19:55:16.471 5dd4 Delete type=2 #1156
+2024/06/01-19:55:16.471 5dd4 Delete type=2 #1158
+2024/06/01-19:55:16.471 5dd4 Delete type=2 #1159
+2024/06/01-19:55:16.472 5dd4 Delete type=2 #1160
+2024/06/01-19:56:03.475 56e8 Level-0 table #1166: started
+2024/06/01-19:56:03.555 56e8 Level-0 table #1166: 1170400 bytes OK
+2024/06/01-19:56:03.579 56e8 Delete type=0 #1157
