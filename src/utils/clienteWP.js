@@ -3,25 +3,26 @@ const qrcode = require('qrcode-terminal');
 const axios = require('axios')
 
 let startConversation = true
+const wwebVersion = '2.3000.1012058694-alpha';
 // Create a new client instance
 const client = new Client({
-	authStrategy: new LocalAuth({ clientId: 'bot-zdg' }),
-  puppeteer: { headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-accelerated-2d-canvas',
-      '--no-first-run',
-      '--no-zygote',
-      '--single-process', // <- this one doesn't works in Windows
-      '--disable-gpu'
-    ] },
-	webVersionCache: {
-	  type: "remote",
-	  remotePath:
-		"https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html",
-	},
+	authStrategy: new LocalAuth({ clientId: 'test' }),
+    puppeteer: { 
+        headless: true,
+        args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process', // <- this one doesn't works in Windows
+        '--disable-gpu'
+        ] },
+        webVersionCache: {
+        type: "remote",
+        remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${wwebVersion}.html`,
+        },
 });
 
 // When the client is ready, run this code (only once)
@@ -49,11 +50,12 @@ client.on('message', message => {
                 type: "text",
                 text: message.body
             },
-            url: "http://127.0.0.1:3000/api/v1/bots/bot-zdg/converse/5522981290226"
+            url: "http://127.0.0.1:3001/api/v1/bots/test/converse/5522981290226"
         }).then(async res => {
             const {responses} = res.data
             
             for (let index = 0; index < responses.length; index++) {
+                console.log('responses', responses[index]);
                 const {text, choices} = responses[index]
                 let choice = ''
                 if( choices ){
@@ -62,6 +64,7 @@ client.on('message', message => {
                     choice = rows.join('\n')
                 }
                 const msg = `${text}\n${choice}`
+                console.log('msg', msg);
                 client.sendMessage(message.from, msg)
                 await delay(message.from)   
             }
