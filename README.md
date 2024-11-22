@@ -33,3 +33,48 @@ Error: Evaluation failed: TypeError: Cannot read properties of undefined (readin
 Resolvido instalando a versão
 
     npm install github:pedroslopez/whatsapp-web.js#webpack-exodus
+
+# PRoblema
+Quando der esse problema
+
+    ProtocolError: Protocol error (Runtime.callFunctionOn): Execution context was destroyed
+
+Remover a pasta
+
+.wwebjs_auth e a .wwebjs_cache
+
+# Enviar o QR Para o front
+
+2
+
+You're registering a callback that sends the qr when the "qr" event is emitted. The res.status(200) is executed before the event is emitted (Even if it is emitted immediately the callback will be executed after the rest of the function since Node is single threaded).
+
+I'm not familiar with the whatsapp package but if you know the qr event will only be emitted once or you only need the first emission you can wrap it in a promise.
+
+Try
+
+router.get('/', async (req, res) => {
+    const client = new Client(...)
+    let qr = await new Promise((resolve, reject) => {
+        client.once('qr', (qr) => resolve(qr))
+    })
+    res.send(qr)
+}
+Notice, I used client.once so the callback is unregistered from the client's event after one event is emitted to prevent memory leaks.
+
+It is a good practice to add a reject scenario to prevent cases the promise doesn't resolve
+
+router.get('/', async (req, res) => {
+    try {
+        const client = new Client(...)
+        let qr = await new Promise((resolve, reject) => {
+            client.once('qr', (qr) => resolve(qr))
+            setTimeout(() => {
+                reject(new Error("QR event wasn't emitted in 15 seconds."))
+            }, 15000)
+        })
+        res.send(qr)
+    } catch (err) {
+        res.send(err.message)
+    }
+}
