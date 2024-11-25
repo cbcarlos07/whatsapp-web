@@ -8,6 +8,7 @@ module.exports = {
     },
     welcome: async (req, res) => {
         const {number, message} =  req.body
+        console.log('welcome',number);
         
         try {
             const numberPhone = formatNumber(number)
