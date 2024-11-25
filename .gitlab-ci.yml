@@ -1,0 +1,31 @@
+image: node:16
+
+stages:
+  - deploy_prd
+
+cache:
+  key: node-common
+  paths:
+    - node_modules/
+
+variables: 
+  SOURCE: '/home/carlos/Projetos/whatsapp-web'
+
+
+deploy_prd:
+  stage: deploy_prd
+  when: manual
+  cache:
+    key: node-common
+    paths:
+      - node_modules/
+  only:
+    - master
+  script:
+    - mkdir -p $SOURCE/back-end/$CI_COMMIT_BRANCH
+    - cp -R $CI_PROJECT_DIR/* $SOURCE/$CI_COMMIT_BRANCH && npm i
+    - pm2 reload 6
+  artifacts:
+    expire_in: 1 day
+  tags:
+    - back
